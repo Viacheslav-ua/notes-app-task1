@@ -1,0 +1,104 @@
+.container {
+  padding: 0 50px;
+  
+}
+
+.title {
+  text-align: center;
+}
+
+.notes {
+  height: 500px;
+  margin-bottom: 50px;
+  text-align: right;
+}
+
+.notes-table, .summary-table {
+  width: 100%;
+  border-spacing: 0 10px;
+  text-align: left;
+}
+
+.table-caption {
+  text-align: left;
+  /* padding-left: 10px; */
+}
+
+.table-header {
+  background-color: #aaa;
+  height: 40px;
+  border-radius: 4px;
+  color: white;
+}
+
+.table-row {
+  background-color: #eee;
+  height: 44px;
+}
+
+.table-row:hover {
+  background-color: #ccc;
+}
+
+.edit {
+  background-color: rgb(212, 248, 215);
+}
+
+.edit:hover {
+  background-color: rgb(172, 238, 177);
+}
+
+.cell-center {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.cell-icon {
+  width: 50px;
+  
+}
+
+.cell-name {
+  width: 250px;
+}
+
+.cell-created {
+  width: 80px;
+}
+
+.cell-category {
+  width: 100px;
+}
+
+.cell-content {
+  width: 350px;
+}
+
+.notes-btn-create {
+  padding: 5px 25px;
+}
+.edit-btn {
+  padding: 5px 25px;
+}
+
+.circle-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #777;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.category-icon {
+  /* margin-left: 10px; */
+  fill: #fff;
+  
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+}
