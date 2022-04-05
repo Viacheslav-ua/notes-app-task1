@@ -1,6 +1,5 @@
 .container {
   padding: 0 50px;
-  
 }
 
 .title {
@@ -34,6 +33,10 @@
 .table-row {
   background-color: #eee;
   height: 44px;
+
+  transition-property: background-color;
+  transition-duration: 100ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .table-row:hover {
@@ -42,6 +45,10 @@
 
 .edit {
   background-color: rgb(212, 248, 215);
+
+  transition-property: background-color;
+  transition-duration: 100ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .edit:hover {
@@ -51,7 +58,8 @@
 .cell-center {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
+  /* border: 1px black; */
 }
 
 .cell-icon {
@@ -63,22 +71,35 @@
   width: 250px;
 }
 
+.input-name {
+  width: 240px;
+  height: 20px;
+}
+
 .cell-created {
   width: 80px;
 }
 
 .cell-category {
-  width: 100px;
+  width: 140px;
 }
+
+.select-category {
+  width: 130px;
+  height: 25px;
+}
+
 
 .cell-content {
   width: 350px;
 }
 
-.notes-btn-create {
-  padding: 5px 25px;
+.input-content {
+  width: 340px;
+  height: 20px;
 }
-.edit-btn {
+
+.notes-btn-create {
   padding: 5px 25px;
 }
 
@@ -93,12 +114,32 @@
   margin-top: 5px;
 }
 
-.category-icon {
-  /* margin-left: 10px; */
-  fill: #fff;
-  
+.icon-save:hover,
+.icon-edit:hover,
+.icon-extract:hover {
+    fill: rgb(16, 70, 13);
+    cursor: pointer;
+}
 
+.icon-exit:hover, .icon-remove:hover {
+    fill: rgb(156, 15, 46);
+    cursor: pointer;
+}
+
+.icon-archive:hover {
+ fill: rgb(55, 3, 187);
+    cursor: pointer;
+}
+
+.category-icon {
+  fill: #fff;
+}
+
+.icon-btn {
+  fill: #777;
+  margin-top: 5px;
+  
   transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
