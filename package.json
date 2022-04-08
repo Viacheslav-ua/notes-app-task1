@@ -10,7 +10,6 @@
     "deploy": "gh-pages -d dist",
     "predeploy": "npm run build"
   },
-  
   "keywords": [],
   "author": "Viacheslav",
   "license": "ISC",
@@ -22,6 +21,7 @@
     "posthtml-include": "^1.6.2"
   },
   "dependencies": {
-  
+    "handlebars": "^4.7.7",
+    "uuid": "^8.3.2"
   }
 }

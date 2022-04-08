@@ -1,0 +1,160 @@
+<div class="notes">
+  <table class="notes-table">
+    {{#if viewArchive}}
+    <caption class="caption-archive">Archive</caption>
+    {{else}}
+    <caption class="caption-active">Active Notes</caption>
+    {{/if}}
+    <thead class="table-header">
+      <tr class="">
+        <td class="cell-icon"></td>
+        <td class="cell-name">Name</td>
+        <td class="cell-created">Created</td>
+        <td class="cell-category">Category</td>
+        <td class="cell-content">Content</td>
+        <td class="cell-dates">Dates</td>
+        <td class="cell-icon"></td>
+        <td class="cell-icon">
+          {{#if viewArchive}}
+          {{else}}
+          <i class='material-icons green-btn white-icon'>unarchive</i>
+          {{/if}}
+        </td>
+        <td class="cell-icon">
+          {{#if viewArchive}}
+          <i class='material-icons green-btn white-icon'>unarchive</i>
+          {{else}}
+          <i class='material-icons red-btn white-icon'>delete_forever</i>
+          {{/if}}
+        </td>
+      </tr>
+    </thead>
+    <tbody class="notes-body">
+      {{#if viewArchive}}
+      {{#each notes}}
+      {{!-- ---------------------- --}}
+      {{#if isArchive}}
+      <tr class="table-row">
+        <td class="cell-center">
+          <div class="circle-icon">
+            <span class='material-icons category-icon'>{{categoryKey}}</span>
+          </div>
+
+        </td>
+        <td class="notes-col">{{name}}</td>
+        <td class="notes-col">{{created}}</td>
+        <td class="notes-col">{{category}}</td>
+        <td class="notes-col">{{content}}</td>
+        <td class="notes-col">{{dates}}</td>
+        <td class="notes-col">
+        </td>
+        <td class="notes-col">
+          <i class='material-icons blue-btn grey-icon' data-key={{ id }}>archive</i>
+        </td>
+        <td class="notes-col">
+          <i class='material-icons red-btn grey-icon' data-key={{ id }}>delete</i>
+        </td>
+      </tr>
+      {{/if}}
+      {{!-- ------------------------------- --}}
+      {{/each}}
+      {{else}}
+      {{#each notes}}
+
+      {{#if isArchive}}
+      {{else}}
+
+      {{#if isEdit}}
+      <tr class="table-row edit">
+        <td class="cell-center"></td>
+        <td>
+          <input type="text" class="input-name" id="js-input-name" value={{name}}>
+        </td>
+        <td id="js-filed-created">{{created}}</td>
+
+        <td class="cell-category">
+          <select name="category" class="select-category" id="js-select">
+
+          </select>
+        </td>
+        <td class="notes-col">
+          <input type="text" class="input-content" id="js-input-content" value={{content}}>
+        </td>
+        <td id="js-filed-dates" colspan="2">{{dates}}</td>
+        <td>
+          {{#if isNew}}
+          <i class='material-icons green-btn grey-icon' data-key={{ id }}>save_alt</i>
+          {{/if}}
+        </td>
+        <td>
+          {{#if isNew}}
+          <i class='material-icons red-btn grey-icon' data-key={{ id }}>close</i>
+          {{else}}
+          <i class='material-icons green-btn grey-icon' data-key={{ id }}>save_alt</i>
+          {{/if}}
+        </td>
+
+      </tr>
+      {{else}}
+      <tr class="table-row">
+        <td class="cell-center">
+          <div class="circle-icon">
+            <span class='material-icons category-icon'>{{categoryKey}}</span>
+          </div>
+
+        </td>
+        <td class="notes-col">{{name}}</td>
+        <td class="notes-col">{{created}}</td>
+        <td class="notes-col">{{category}}</td>
+        <td class="notes-col">{{content}}</td>
+        <td class="notes-col">{{dates}}</td>
+        <td class="notes-col">
+          <i class='material-icons green-btn grey-icon' data-key={{ id }}>mode_edit</i>
+        </td>
+        <td class="notes-col">
+          <i class='material-icons blue-btn grey-icon' data-key={{ id }}>archive</i>
+        </td>
+        <td class="notes-col">
+          <i class='material-icons red-btn grey-icon' data-key={{ id }}>delete</i>
+        </td>
+      </tr>
+      {{/if}}
+      {{/if}}
+      {{/each}}
+      {{/if}}
+    </tbody>
+  </table>
+  {{#if viewArchive}}
+  {{else}}
+  <button class="notes-btn-create" id="js-btn-create">Create Note</button>
+  {{/if}}
+
+</div>
+<div class="summary ">
+  <table class="summary-table">
+    <caption class="table-caption">Note Category Summary</caption>
+    <thead class="table-header">
+      <tr>
+        <td class="cell-icon"></td>
+        <td>Note Category</td>
+        <td>Active</td>
+        <td>Archived</td>
+      </tr>
+    </thead>
+    <tbody class="summary-body">
+      {{#each statistic}}
+      <tr class="table-row">
+        <td class="cell-center">
+          <div class="circle-icon">
+            <i class='material-icons category-icon'>{{categoryKey}}</i>
+          </div>
+        </td>
+        <td class="summary-col">{{categoryName}}</td>
+        <td class="summary-col">{{active}}</td>
+        <td class="summary-col">{{archived}}</td>
+
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

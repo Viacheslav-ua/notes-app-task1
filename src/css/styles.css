@@ -1,0 +1,169 @@
+.container {
+  padding: 0 50px;
+}
+
+.title {
+  text-align: center;
+}
+
+.notes {
+  height: 500px;
+  margin-bottom: 50px;
+  text-align: right;
+  overflow-y: auto;
+}
+
+.caption-archive {
+  color:brown;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.caption-active {
+  color:rgb(53, 48, 48);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.notes-table, .summary-table {
+  width: 100%;
+  border-spacing: 0 10px;
+  text-align: left;
+}
+
+.table-caption {
+  text-align: left;
+}
+
+.table-header {
+  background-color: #aaa;
+  height: 40px;
+  border-radius: 4px;
+  color: white;
+}
+
+.table-row {
+  background-color: #eee;
+  height: 44px;
+
+  transition-property: background-color;
+  transition-duration: 100ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.table-row:nth-child(2n) {
+  background-color: #ddf;
+}
+
+
+.table-row:hover {
+  background-color: #ccc;
+}
+
+.table-row.edit {
+  background-color: rgb(190, 243, 195);
+  transition-property: background-color;
+  transition-duration: 100ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.edit:hover {
+  background-color: rgb(150, 240, 158);
+}
+
+.cell-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cell-icon {
+  width: 50px;
+  
+}
+
+.cell-name {
+  width: 250px;
+}
+
+.input-name {
+  width: 240px;
+  height: 20px;
+}
+
+.cell-created {
+  width: 80px;
+}
+
+.cell-category {
+  width: 140px;
+}
+
+.select-category {
+  width: 130px;
+  height: 25px;
+}
+
+
+.cell-content {
+  width: 350px;
+}
+
+.input-content {
+  width: 340px;
+  height: 20px;
+}
+
+.notes-btn-create {
+  padding: 5px 25px;
+}
+
+.circle-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #777;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3px;
+}
+
+.red-btn:hover {
+  font-size: 32px;
+  color: rgb(156, 15, 46);
+  cursor: pointer;
+}
+
+.green-btn:hover {
+  font-size: 32px;
+  color: rgb(16, 70, 13);
+  cursor: pointer;
+}
+
+.blue-btn:hover {
+  font-size: 32px;
+  color: rgb(4, 8, 112);
+  cursor: pointer;
+}
+
+.category-icon {
+  color: #fff;
+  font-size: 22px;
+}
+
+.white-icon {
+  color: #fff;
+  font-size: 30px;  
+  transition-property: color;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.grey-icon {
+  color: #777;
+  font-size: 30px;  
+  transition-property: color;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
