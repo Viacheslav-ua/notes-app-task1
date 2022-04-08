@@ -1,0 +1,86 @@
+[
+  {
+    "id": "1",
+    "name": "Shopping list",
+    "created": "20.03.2022",
+    "category": "Task",
+    "categoryKey": "shopping_cart",
+    "content": "Tomatoes, bread, meat",
+    "dates": [],
+    "isArchive": true,
+    "isEdit": false,
+    "isNew": false
+  },
+  {
+    "id": "2",
+    "name": "The theory of evolution ...",
+    "created": "22.03.2022",
+    "category": "Random Thought",
+    "categoryKey": "psychology",
+    "content": "The evolution of populations due to chance is",
+    "dates": [],
+    "isArchive": false,
+    "isEdit": false,
+    "isNew": false
+  },
+  {
+    "id": "3",
+    "name": "New Feature",
+    "created": "03.04.2022",
+    "category": "Idea",
+    "categoryKey": "lightbulb",
+    "content": "Implement new feature 4/5/2022",
+    "dates": ["03.04.2022", "04.04.2022"],
+    "isArchive": false,
+    "isEdit": false,
+    "isNew": false
+  },
+  {
+    "id": "4",
+    "name": "William Gaddis",
+    "created": "10.04.2022",
+    "category": "Quote",
+    "categoryKey": "format_quote",
+    "content": "Power doesn't corrupt people, people corrupt power.",
+    "dates": [],
+    "isArchive": true,
+    "isEdit": false,
+    "isNew": false
+  },
+  {
+    "id": "5",
+    "name": "Books",
+    "created": "12.04.2022",
+    "category": "Task",
+    "categoryKey": "shopping_cart",
+    "content": "The Lean Startup",
+    "dates": ["13.04.22"],
+    "isArchive": false,
+    "isEdit": false,
+    "isNew": false
+  },
+  {
+    "id": "6",
+    "name": "Visit",
+    "created": "22.04.2022",
+    "category": "Quote",
+    "categoryKey": "format_quote",
+    "content": "Visit a doctor 23.04.2022",
+    "dates": ["23.04.2022"],
+    "isArchive": false,
+    "isEdit": false,
+    "isNew": false
+  },
+  {
+    "id": "7",
+    "name": "Call",
+    "created": "22.04.2022",
+    "category": "Task",
+    "categoryKey": "shopping_cart",
+    "content": "Call to work 23.04.2022 15-00",
+    "dates": ["23.04.2022"],
+    "isArchive": false,
+    "isEdit": false,
+    "isNew": false
+  }
+]

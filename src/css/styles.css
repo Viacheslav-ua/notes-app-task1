@@ -10,6 +10,19 @@
   height: 500px;
   margin-bottom: 50px;
   text-align: right;
+  overflow-y: auto;
+}
+
+.caption-archive {
+  color:brown;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.caption-active {
+  color:rgb(53, 48, 48);
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .notes-table, .summary-table {
@@ -20,7 +33,6 @@
 
 .table-caption {
   text-align: left;
-  /* padding-left: 10px; */
 }
 
 .table-header {
@@ -39,27 +51,30 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.table-row:nth-child(2n) {
+  background-color: #ddf;
+}
+
+
 .table-row:hover {
   background-color: #ccc;
 }
 
-.edit {
-  background-color: rgb(212, 248, 215);
-
+.table-row.edit {
+  background-color: rgb(190, 243, 195);
   transition-property: background-color;
   transition-duration: 100ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .edit:hover {
-  background-color: rgb(172, 238, 177);
+  background-color: rgb(150, 240, 158);
 }
 
 .cell-center {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 1px black; */
 }
 
 .cell-icon {
@@ -104,42 +119,51 @@
 }
 
 .circle-icon {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background-color: #777;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 5px;
+  margin-top: 3px;
 }
 
-.icon-save:hover,
-.icon-edit:hover,
-.icon-extract:hover {
-    fill: rgb(16, 70, 13);
-    cursor: pointer;
+.red-btn:hover {
+  font-size: 32px;
+  color: rgb(156, 15, 46);
+  cursor: pointer;
 }
 
-.icon-exit:hover, .icon-remove:hover {
-    fill: rgb(156, 15, 46);
-    cursor: pointer;
+.green-btn:hover {
+  font-size: 32px;
+  color: rgb(16, 70, 13);
+  cursor: pointer;
 }
 
-.icon-archive:hover {
- fill: rgb(55, 3, 187);
-    cursor: pointer;
+.blue-btn:hover {
+  font-size: 32px;
+  color: rgb(4, 8, 112);
+  cursor: pointer;
 }
 
 .category-icon {
-  fill: #fff;
+  color: #fff;
+  font-size: 22px;
 }
 
-.icon-btn {
-  fill: #777;
-  margin-top: 5px;
-  
-  transition-property: fill;
+.white-icon {
+  color: #fff;
+  font-size: 30px;  
+  transition-property: color;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.grey-icon {
+  color: #777;
+  font-size: 30px;  
+  transition-property: color;
   transition-duration: 200ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
