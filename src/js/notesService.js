@@ -5,7 +5,7 @@ const createNote = (data) => {
   const newNote = {
     id: uuidv4(),
     name: '',
-    created: new Date().toLocaleDateString(),
+    created: new Date().toLocaleDateString('en-GB'),
     category: "",
     categoryKey: "",
     content: "",
@@ -125,15 +125,15 @@ const removeAll = (data) => {
 }
 
 function registerDates(str, dates) {
-  const strDate = str.match(/\d{1,2}\.\d{1,2}\.\d{4}/)
+  const strDate = str.match(/\d{1,2}[\.\/\-]\d{1,2}[\.\/\-]\d{4}/)
   if (!strDate) {
     return
   }
-  console.log('find', dates.find(item => item === strDate[0]))
-  if (dates.find(item => item === strDate[0])) {
+  const date = strDate[0].replace(/[\.\-]/g, '/')
+  if (dates.find(item => item === date)) {
     return
   }
-  return strDate[0]
+  return date
 }
 
 export default {
